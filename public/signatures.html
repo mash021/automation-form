@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نمایش امضاها</title>
+    <link rel="stylesheet" href="css/signatures.css">
+</head>
+<body>
+    <div class="container">
+        <h1>امضاهای ذخیره شده</h1>
+        <div id="signatures"></div>
+    </div>
+    <script>
+        async function fetchSignatures() {
+            try {
+                const response = await fetch('/api/signatures');
+                const signatures = await response.json();
+                const container = document.getElementById('signatures');
+                
+                signatures.forEach(signature => {
+                    const img = document.createElement('img');
+                    img.src = signature.data;
+                    img.alt = 'امضا';
+                    img.style.width = '300px'; // تنظیم اندازه تصویر
+                    img.style.margin = '10px';
+                    container.appendChild(img);
+                });
+            } catch (error) {
+                console.error('خطا در واکشی امضاها:', error);
+            }
+        }
+
+        fetchSignatures();
+    </script>
+</body>
+</html>

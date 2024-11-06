@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    margin-top: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.add-field-btn, .submit-btn, .remove-field-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-field-btn {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.submit-btn {
+    background-color: #007BFF;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.remove-field-btn {
+    background-color: #FF4136;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.add-field-btn:hover {
+    background-color: #45a049;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.remove-field-btn:hover {
+    background-color: #e63900;
+}

@@ -1,0 +1,26 @@
+office-automation/
+│
+├── server.js
+├── config/
+│   └── db.js
+├── models/
+│   ├── User.js
+│   └── Form.js
+├── routes/
+│   ├── authRoutes.js
+│   └── formRoutes.js
+├── controllers/
+│   ├── authController.js
+│   └── formController.js
+├── middleware/
+│   └── authMiddleware.js
+│
+└── public/
+    ├── css/
+    │   ├── styles.css
+    │   ├── form-builder.css
+    │   └── home.css
+    ├── register.html
+    ├── login.html
+    ├── form-builder.html
+    └── home.html

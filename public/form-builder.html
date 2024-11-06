@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم‌ساز</title>
+    <link rel="stylesheet" href="css/form-builder.css">
+</head>
+<body>
+    <div class="container">
+        <h1>فرم‌ساز</h1>
+        <form id="form-builder">
+            <div class="form-group">
+                <label for="form-title">عنوان فرم</label>
+                <input type="text" id="form-title" placeholder="عنوان فرم را وارد کنید">
+            </div>
+            <div class="form-group">
+                <label for="form-description">توضیحات فرم</label>
+                <textarea id="form-description" placeholder="توضیحات فرم را وارد کنید"></textarea>
+            </div>
+            <div id="fields-container"></div>
+            <button type="button" class="add-field-btn" onclick="addField()">افزودن فیلد جدید</button>
+            <button type="submit" class="submit-btn">ایجاد فرم</button>
+        </form>
+    </div>
+    <script>
+        function addField() {
+            const container = document.getElementById('fields-container');
+            const field = document.createElement('div');
+            field.classList.add('form-group');
+            field.innerHTML = `
+                <input type="text" placeholder="نام فیلد جدید">
+                <button type="button" class="remove-field-btn" onclick="removeField(this)">حذف</button>
+            `;
+            container.appendChild(field);
+        }
+
+        function removeField(button) {
+            button.parentElement.remove();
+        }
+    </script>
+</body>
+</html>
